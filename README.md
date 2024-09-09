@@ -4,7 +4,7 @@ This project focuses on developing a comprehensive method for assessing fruit de
 
 
 ## Abstract
-The project aims to create a reliable and non-destructive method for fruit decay assessment by integrating computer vision for external decay detection and microwave technology for internal decay assessment.
+The project aims to create a reliable and non-destructive method for fruit decay assessment by combining computer vision for external decay detection and microwave technology for internal decay assessment.
 
 ### Importance of Fruit Quality Assessment
 - Ensuring fruit quality is essential in the food industry to prevent spoilage and ensure consumer satisfaction.
@@ -18,18 +18,14 @@ The project aims to create a reliable and non-destructive method for fruit decay
 ## Methodology
 
 ### Computer Vision in Fruit Assessment
-- **Explanation**: Computer vision techniques are employed to detect visible external decay, such as discoloration, bruises, and blemishes..
+- **Explanation**: Computer vision techniques are employed to detect visible external decay, such as discoloration, bruises, and blemishes.This uses a mobilenet architecture for the detection of rotten fruits. It contains a dataset of the rotten and freshfruits of apple, bannana and orange. This is used for the classification of the fruit to predict weather it is rotten or not. This computer vision part mainly aims in making the detection process faster if the fruit is detected as rooten from outside there is no requirement to test it with the microwave technology. If it is detected to be fresh then its internal state is accessed using microwave technology.
 - **Software Requirements**: Python IDLE, Jupyter Notebook.
 
 ### Microwave Technology in Fruit Assessment
-- **Explanation**: Microwave technology provides non-destructive internal decay detection by analyzing dielectric properties, moisture content, and texture.
+- **Explanation**: Microwave technology provides non-destructive internal decay detection by analyzing dielectric properties, moisture content, and texture. This is done using a Virtual network analyser(VNA). Here the internal state of the fruit is accessed using the S21 parameters with a frequency sweep of 1GHz - 10GHz. The CSV file generated using the VNA is used to visualize the plot of frequency vs Gain and it is also used in the NRW method to calculate the permitivity of the fruit. Using these two the freshness of the fruit is anlaysed.
 - **Hardware Requirements**: Dielectric Probe Kit, Network Analyzer, 3-D Printed Conveyor Belt Prototype.
 - **Software Requirements**: HFSS, Ansys.
 
-## Project Planning
-1. Curation of a database for dielectric properties of fresh and rotten fruits.
-2. Testing and training deep learning models for classification.
-3. Fusion of internal and external decay assessment methods.
 
 ### Software
 - Python IDLE
